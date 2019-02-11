@@ -1,0 +1,9 @@
+- bounty 수혜자 리스트는 ./list/bountyBeneficiaries.tsv 에 email eth_address fxt_amount 순서로 저장되어 있다.
+- $ npm run bounty 로 위 파일의 내용을 mysql db 에 넣을 수 있다.
+- db 설정은 ./mysql/config.js 에 설정한다.
+
+
+Issues
+- 원본 데이터 rnmt3948@gmail.com 0x90fDe0A168B861B4961fCbD59D114E523d16031D 5977.443609 의 eth_address 확인.
+- fxt_amount type을 int 로 할 것인지 double(소수 18자리수) 것인지.
+- transfered_at 의 값을 NULL 로 두고, 전송에 성공했을 경우에만 timestamp 를 찍거나, 명시적으로 tx_result 값을 전송 성공시에만 true 로 하거나.
